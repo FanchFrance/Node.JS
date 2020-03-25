@@ -1,0 +1,15 @@
+process.stdin.resume()
+process.stdin.setEncoding('utf8')
+
+console.log("How old are you?")
+process.stdin.on('data', (age) => {
+  let actualYear = 2020;
+  if (age <= 99 && age > 0){
+    let birthYear = actualYear - age;
+    console.log("Your birth year is "  + (birthYear))
+  } else {
+    console.log("enter a number");
+  }
+  
+  process.exit()
+})
